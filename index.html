@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; URL='https://wa.me/5491155632400?text=Hola%20vengo%20de%20parte%20de%20XBET5'" />
-    <title>Inicio</title>
-  </head>
-  <body>
-    <p>Redirigiendo...</p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Conectando...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #00bcd4;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      margin: 20px auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    .msg {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://i.postimg.cc/zB5qz1Zk/xbet5-logo.png" alt="XBET5 Logo" class="logo">
+  <h2>Conectando con un asesor...</h2>
+  <div class="loader"></div>
+  <p class="msg">No cierres esta ventana</p>
+
+  <script>
+    setTimeout(function() {
+      const mensaje = encodeURIComponent("Hola, vengo de parte de XBET5");
+      const telefono = "5491155632400"; // 
+      const isMobile = /iPhone|Android|iPad/i.test(navigator.userAgent);
+
+      const link = isMobile 
+        ? `https://wa.me/${telefono}?text=${mensaje}`
+        : `https://web.whatsapp.com/send?phone=${telefono}&text=${mensaje}`;
+
+      window.location.href = link;
+    }, 3000);
+  </script>
+</body>
 </html>
